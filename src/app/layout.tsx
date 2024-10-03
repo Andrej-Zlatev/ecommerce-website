@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import Link from "next/link";
 import { Manrope } from "@next/font/google";
+import Navbar from "./components/common/Navbar/Navbar";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -24,8 +24,7 @@ export default function RootLayout({
       <body
         className={`${manrope.className} antialiased text-[15px] leading-[25px]  font-medium`}
       >
-        <Link href={"/about"}>About Page</Link>
-        <Link href={"/"}>Home Page</Link>
+        <Navbar />
         {children}
       </body>
     </html>

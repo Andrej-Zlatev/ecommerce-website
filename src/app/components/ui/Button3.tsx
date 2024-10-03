@@ -11,7 +11,7 @@ const Button3 = ({ children, onClick }: ButtonProps) => {
     >
       {children}{" "}
       <Image
-        src={"/assets/Icons/right-path.svg"}
+        src={"/assets/shared/desktop/icon-arrow-right.svg"}
         width={5}
         height={10}
         alt="path-icon"
