@@ -1,5 +1,5 @@
-import productData from "../data/data.json";
 import Image from "next/image";
+import { Product } from "../types/product";
 
 const ProductImage = ({ product }) => {
   return (
@@ -29,10 +29,13 @@ const ProductImage = ({ product }) => {
   );
 };
 
-const About = () => {
+const About = async () => {
+  const response = await fetch("http://localhost:3001/products");
+  const data: Product[] = await response.json();
+
   return (
     <div>
-      {productData.map((product) => (
+      {data.map((product) => (
         <ProductImage key={product.id} product={product} />
       ))}
     </div>

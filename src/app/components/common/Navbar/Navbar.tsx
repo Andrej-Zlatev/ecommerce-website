@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <div className="bg-dark">
       <AppContainer>
-        <header className="flex justify-between border-b border-lightGray py-8 ">
+        <header className="flex justify-between border-b border-gray-500 py-8 ">
           <Image
             src={"/assets/shared/tablet/icon-hamburger.svg"}
             width={16}
