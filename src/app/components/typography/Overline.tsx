@@ -1,8 +1,14 @@
-import { TypographyProps } from "@/app/types/typography";
+import { ReactNode } from "react";
 
-const Overline = ({ children }: TypographyProps) => {
+interface ButtonProps {
+  color: string;
+  children: ReactNode;
+}
+const Overline = ({ children, color }: ButtonProps) => {
   return (
-    <span className="text-[14px] leading-[19px] tracking-[10px] font-regular uppercase font-manrope text-primary">
+    <span
+      className={`text-[14px] leading-[19px] tracking-[10px] font-regular uppercase font-manrope ${color}`}
+    >
       {children}
     </span>
   );
