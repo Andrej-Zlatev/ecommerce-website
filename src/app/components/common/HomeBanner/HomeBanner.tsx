@@ -1,8 +1,8 @@
-import AppContainer from "../layout/AppContainer";
-import Overline from "../typography/Overline";
-import Heading1 from "../typography/Heading1";
-import Button1 from "../ui/Button1";
-import Heading3 from "../typography/Heading3";
+import AppContainer from "../../layout/AppContainer";
+import Overline from "../../typography/Overline";
+import Heading1 from "../../typography/Heading1";
+import Button1 from "../../ui/Button1";
+import Heading3 from "../../typography/Heading3";
 
 const HomeBanner = () => {
   return (

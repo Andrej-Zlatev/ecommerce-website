@@ -21,12 +21,14 @@ const Navbar = () => {
             alt="icon-hamburger"
             className="lg:hidden"
           />
-          <Image
-            src={"/assets/shared/desktop/logo.svg"}
-            width={143}
-            height={25}
-            alt="logo"
-          />
+          <Link href={"/"}>
+            <Image
+              src={"/assets/shared/desktop/logo.svg"}
+              width={143}
+              height={25}
+              alt="logo"
+            />
+          </Link>
 
           <ul className="text-white  gap-x-8 text-[13px] font-bold uppercase tracking-[2px]  hidden  lg:flex">
             {links.map((link, index) => (

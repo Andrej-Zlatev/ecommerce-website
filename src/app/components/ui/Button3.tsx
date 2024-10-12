@@ -6,7 +6,7 @@ const Button3 = ({ children, onClick }: ButtonProps) => {
     <button
       onClick={onClick}
       className={
-        "w-[160px] h-[48px] bg-white text-lightGray hover:text-primary uppercase tracking-widest flex justify-center items-center"
+        "w-[160px] h-[48px] font-bold hover:text-primary uppercase tracking-widest flex justify-center items-center text-[#979797]"
       }
     >
       {children}{" "}
