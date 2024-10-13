@@ -4,6 +4,7 @@ import HomeBanner from "./components/common/HomeBanner/HomeBanner";
 import CategorySection from "./components/common/CategorySection/CategorySection";
 import RandomProducts from "./components/Home/RandomProducts";
 import BestGearSection from "./components/Home/BestGearSection";
+import Footer from "./components/common/Footer/Footer";
 
 // async function getProducts() {
 //   const res = await fetch("http://localhost:3001/products");
@@ -25,6 +26,7 @@ export default async function Home() {
         <CategorySection />
         <RandomProducts />
         <BestGearSection />
+        <Footer />
       </div>
     </>
   );

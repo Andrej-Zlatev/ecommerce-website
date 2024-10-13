@@ -30,7 +30,7 @@ const BestGearSection = () => {
               width={540}
               height={588}
               alt={"best-gear-image"}
-              className="rounded-md"
+              className="rounded-md w-full"
             />
           </div>
         </div>
