@@ -3,6 +3,7 @@
 import HomeBanner from "./components/common/HomeBanner/HomeBanner";
 import CategorySection from "./components/common/CategorySection/CategorySection";
 import RandomProducts from "./components/Home/RandomProducts";
+import BestGearSection from "./components/Home/BestGearSection";
 
 // async function getProducts() {
 //   const res = await fetch("http://localhost:3001/products");
@@ -23,6 +24,7 @@ export default async function Home() {
       <div className="py-24">
         <CategorySection />
         <RandomProducts />
+        <BestGearSection />
       </div>
     </>
   );
