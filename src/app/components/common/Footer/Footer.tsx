@@ -15,8 +15,8 @@ const Footer = () => {
     <div className="bg-dark">
       <AppContainer>
         <AppSection>
-          <div className="space-y-6 text-center">
-            <div className="flex  justify-between  flex-col md:flex-row lg:flex-row space-y-6  items-center">
+          <div className="space-y-6  md:text-left lg:text-left">
+            <div className="flex  justify-between  flex-col   lg:flex-row space-y-6 md:space-y-6 lg:space-y-0 items-center md:items-start ">
               <Link href={"/"}>
                 <Image
                   src={"/assets/shared/desktop/logo.svg"}
@@ -25,7 +25,7 @@ const Footer = () => {
                   alt="logo"
                 />
               </Link>
-              <ul className="text-white  gap-x-8 text-[13px] font-bold uppercase tracking-[2px]   flex flex-col">
+              <ul className="text-white  gap-x-8 text-[13px] font-bold uppercase tracking-[2px] items-center flex flex-col md:flex-row lg:flex-row">
                 {links.map((link, index) => (
                   <Link
                     href={link.link}
@@ -45,9 +45,9 @@ const Footer = () => {
                 and visit our demo facility - we’re open 7 days a week.
               </p>
             </div>
-            <div className="flex justify-between text-neutral-400 text-center flex-col items-center space-y-6">
+            <div className="flex justify-between text-neutral-400 text-center md:text-left lg:text-left flex-col md:flex-row lg:flex-row   items-center   space-y-6 md:space-y-0 lg:space-y-0">
               <p>Copyright 2024. All Rights Reserved</p>
-              <ul className="flex gap-x-4">
+              <ul className="flex gap-x-4  items-center ">
                 <li>
                   <a href="/" className="group">
                     <svg
