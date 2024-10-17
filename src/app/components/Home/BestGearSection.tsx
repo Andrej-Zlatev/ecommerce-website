@@ -7,7 +7,7 @@ const BestGearSection = () => {
     <AppContainer>
       <AppSection>
         <div className="lg:grid grid-cols-2 gap-x-[30px] hidden ">
-          <div className="flex justify-center items-center">
+          <div className="flex   items-center">
             <div className="w-[445px] space-y-[2rem]">
               <Heading2>
                 Bringing you the <span className="text-primary">best </span>

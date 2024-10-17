@@ -1,7 +1,8 @@
-import ProductCard from "../components/common/ProductCard/ProductCard";
-import Heading2 from "../components/typography/Heading2";
+import CategoryBanner from "../components/common/CategoryBanner/CategoryBanner";
+import CategorySection from "../components/common/CategorySection/CategorySection";
+import ProductList from "../components/Headphones/ProductList";
+import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
-import Image from "next/image";
 const Headphones = async () => {
   const response = await fetch("http://localhost:3001/products");
   const data: Product[] = await response.json();
@@ -11,12 +12,12 @@ const Headphones = async () => {
 
   return (
     <>
-      <div className="bg-dark flex justify-center items-center py-16">
-        <Heading2 color="text-white">headphones</Heading2>
+      <CategoryBanner category={"headphones"} />
+      <div className="py-16">
+        <ProductList products={headphones} />
+        <CategorySection />
+        <BestGearSection />
       </div>
-      {headphones.map((headphone) => (
-        <ProductCard product={headphone} key={headphone.id} />
-      ))}
     </>
   );
 };
