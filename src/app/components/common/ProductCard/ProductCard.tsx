@@ -5,10 +5,12 @@ import AppSection from "../../layout/AppSection";
 import Overline from "../../typography/Overline";
 import Heading2 from "../../typography/Heading2";
 import Button1 from "../../ui/Button1";
+
 interface ProductCardProps {
   product: Product;
   index: number;
 }
+
 const ProductCard = ({ product, index }: ProductCardProps) => {
   return (
     <AppContainer>

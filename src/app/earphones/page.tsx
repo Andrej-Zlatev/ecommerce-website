@@ -4,17 +4,17 @@ import ProductList from "../components/common/ProductList/ProductList";
 import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
 
-const Speakers = async () => {
+const Earphones = async () => {
   const response = await fetch("http://localhost:3001/products");
   const data: Product[] = await response.json();
-  const speakers = data.filter((product) => product.category === "speakers");
-  const categoryName = speakers[0].category;
+  const earphones = data.filter((product) => product.category === "earphones");
+  const categoryName = earphones[0].category;
 
   return (
     <>
       <CategoryBanner category={categoryName} />
       <div className="py-16">
-        <ProductList products={speakers} />
+        <ProductList products={earphones} />
         <CategorySection />
         <BestGearSection />
       </div>
@@ -22,4 +22,4 @@ const Speakers = async () => {
   );
 };
 
-export default Speakers;
+export default Earphones;
