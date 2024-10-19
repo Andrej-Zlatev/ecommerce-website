@@ -1,26 +1,22 @@
-import { Product } from "@/app/types/product";
-import Image from "next/image";
 import AppContainer from "../../layout/AppContainer";
 import AppSection from "../../layout/AppSection";
-import Overline from "../../typography/Overline";
-import Heading2 from "../../typography/Heading2";
+import Image from "next/image";
 import Button1 from "../../ui/Button1";
-import Link from "next/link";
+import Button5 from "../../ui/Button5";
+import Heading6 from "../../typography/Heading6";
+import Heading2 from "../../typography/Heading2";
+import { Product } from "@/app/types/product";
+import Overline from "../../typography/Overline";
 
-interface ProductCardProps {
+interface ProductCardDetailProps {
   product: Product;
-  index: number;
 }
 
-const ProductCard = ({ product, index }: ProductCardProps) => {
+const ProductCardDetail = ({ product }: ProductCardDetailProps) => {
   return (
     <AppContainer>
       <AppSection>
-        <div
-          className={`lg:flex  flex-col flex ${
-            index % 2 === 0 ? "lg:flex-row " : "lg:flex-row-reverse"
-          }  `}
-        >
+        <div className={"lg:flex-row  flex-col flex"}>
           <div className="lg:w-[50%]">
             <Image
               src={product.categoryImage.desktop}
@@ -52,12 +48,13 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
               {product.new === true && (
                 <Overline color={"text-primary"}>New Product</Overline>
               )}
-
               <Heading2>{product.name}</Heading2>
               <p>{product.description}</p>
-              <Link href={`${product.category}/${product.id}`}>
-                <Button1>See product</Button1>
-              </Link>
+              <Heading6>{`$${product.price}`}</Heading6>
+              <div>
+                <Button5 />
+                <Button1>add to card</Button1>
+              </div>
             </div>
           </div>
         </div>
@@ -65,4 +62,5 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
     </AppContainer>
   );
 };
-export default ProductCard;
+
+export default ProductCardDetail;
