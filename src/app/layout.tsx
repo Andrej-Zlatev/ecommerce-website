@@ -4,6 +4,7 @@ import "./globals.css";
 import { Manrope } from "@next/font/google";
 import Navbar from "./components/common/Navbar/Navbar";
 import Footer from "./components/common/Footer/Footer";
+import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTopButton";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <ScrollToTopButton />
         <Footer />
       </body>
     </html>
