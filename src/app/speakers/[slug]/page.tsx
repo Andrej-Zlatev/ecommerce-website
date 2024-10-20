@@ -1,12 +1,5 @@
+import Features from "@/app/components/common/Features/Features";
 import ProductCardDetail from "@/app/components/common/ProductCardDetail/ProductCardDetail";
-import AppContainer from "@/app/components/layout/AppContainer";
-import AppSection from "@/app/components/layout/AppSection";
-import Heading2 from "@/app/components/typography/Heading2";
-import Heading6 from "@/app/components/typography/Heading6";
-import Overline from "@/app/components/typography/Overline";
-import Button1 from "@/app/components/ui/Button1";
-import Button5 from "@/app/components/ui/Button5";
-import Image from "next/image";
 
 const ProductDetail = async ({ params }: { params: { slug: string } }) => {
   try {
@@ -31,6 +24,7 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
     return (
       <>
         <ProductCardDetail product={product} />
+        <Features product={product} />
       </>
     );
   } catch (error) {

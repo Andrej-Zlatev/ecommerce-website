@@ -51,7 +51,7 @@ const ProductCardDetail = ({ product }: ProductCardDetailProps) => {
               <Heading2>{product.name}</Heading2>
               <p>{product.description}</p>
               <Heading6>{`$${product.price}`}</Heading6>
-              <div>
+              <div className=" flex gap-x-4">
                 <Button5 />
                 <Button1>add to card</Button1>
               </div>
