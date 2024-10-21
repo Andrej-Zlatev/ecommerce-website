@@ -1,4 +1,6 @@
+import Features from "@/app/components/common/Features/Features";
 import ProductCardDetail from "@/app/components/common/ProductCardDetail/ProductCardDetail";
+import ProductGallery from "@/app/components/common/ProductGallery/ProductGallery";
 
 const ProductDetail = async ({ params }: { params: { slug: string } }) => {
   try {
@@ -18,6 +20,8 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
     return (
       <>
         <ProductCardDetail product={product} />
+        <Features product={product} />
+        <ProductGallery product={product} />
       </>
     );
   } catch (error) {
