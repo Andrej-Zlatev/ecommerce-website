@@ -4,12 +4,13 @@ import ProductList from "../components/common/ProductList/ProductList";
 import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
 
-const Headphones = async () => {
-  const response = await fetch("http://localhost:3001/products");
-  const data: Product[] = await response.json();
-  const headphones = data.filter(
-    (product) => product.category === "headphones"
+import data from "../data/data.json";
+
+const Headphones = () => {
+  const headphones = data.products.filter(
+    (product: Product) => product.category === "headphones"
   );
+
   const categoryName = headphones[0].category;
 
   return (

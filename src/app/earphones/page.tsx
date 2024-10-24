@@ -3,11 +3,13 @@ import CategorySection from "../components/common/CategorySection/CategorySectio
 import ProductList from "../components/common/ProductList/ProductList";
 import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
+import data from "../data/data.json";
 
 const Earphones = async () => {
-  const response = await fetch("http://localhost:3001/products");
-  const data: Product[] = await response.json();
-  const earphones = data.filter((product) => product.category === "earphones");
+  const earphones = data.products.filter(
+    (product: Product) => product.category === "earphones"
+  );
+
   const categoryName = earphones[0].category;
 
   return (
