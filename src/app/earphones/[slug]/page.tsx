@@ -11,6 +11,7 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
   if (!product) {
     return <div>Product not found</div>;
   }
+
   return (
     <>
       <ProductCardDetail product={product} />

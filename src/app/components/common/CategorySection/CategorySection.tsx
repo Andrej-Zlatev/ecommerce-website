@@ -6,7 +6,7 @@ import Button3 from "../../ui/Button3";
 import { categoryProps } from "@/app/types/categoryProps";
 import Link from "next/link";
 
-const categories: categoryProps[] = [
+export const categories: categoryProps[] = [
   {
     category: "headphones",
     id: 1,
