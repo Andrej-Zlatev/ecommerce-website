@@ -82,7 +82,7 @@ const Navbar = () => {
         <div className="absolute top-[89.59px] left-0 w-full h-[calc(100vh-89.59px)] lg:hidden flex md:items-center bg-white z-30 overflow-y-auto  pt-[3rem] md:pt-0">
           <AppContainer>
             <AppSection>
-              <div className="grid grid-cols-1 gap-y-24 pb-12 md:grid-cols-3 md:gap-x-[30px]">
+              <div className="grid grid-cols-1 gap-y-24 pb-20 md:grid-cols-3 md:gap-x-[30px]">
                 {categories.map((category) => (
                   <div
                     className="bg-lightGray h-[210px] rounded-[8px] relative flex justify-center items-center text-center"
