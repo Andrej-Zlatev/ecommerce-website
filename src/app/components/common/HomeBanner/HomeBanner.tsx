@@ -20,7 +20,9 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Button1>See product</Button1>
+            <Link href={"/headphones/4"}>
+              <Button1>See product</Button1>
+            </Link>
           </div>
         </div>
         <div
@@ -34,7 +36,9 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Button1>See product</Button1>
+            <Link href={"/headphones/4"}>
+              <Button1>See product</Button1>
+            </Link>
           </div>
         </div>
         <div
