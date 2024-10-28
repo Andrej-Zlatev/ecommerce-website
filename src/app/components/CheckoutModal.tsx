@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useCart } from "../context/CartContext";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
-import { useRouter } from "next/navigation";
 
 interface CheckoutModalProps {
   isOpen: boolean;
@@ -28,8 +27,6 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({
 
   const SHIPPING_COST = 10.0;
   const VAT_PERCENTAGE = 0.2;
-
-  const router = useRouter();
 
   const calculateGrandTotal = () => {
     const totalPrice = getTotalPrice();
