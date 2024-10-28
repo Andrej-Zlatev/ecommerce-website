@@ -7,9 +7,13 @@ import { categories } from "../CategorySection/CategorySection";
 import Button3 from "../../ui/Button3";
 import Heading6 from "../../typography/Heading6";
 import AppSection from "../../layout/AppSection";
+import { useCart } from "@/app/context/CartContext";
+import Cart from "../../Cart";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false); // State for cart visibility
+  const { cartItems } = useCart(); // Get cart items from context
 
   const toggleMenu = () => {
     setMenu((prevState) => !prevState);
@@ -18,6 +22,10 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setMenu(false);
   };
+  const toggleCart = () => {
+    setCartOpen((prevState) => !prevState);
+  };
+
   // Prevent background scroll when menu is open
   useEffect(() => {
     if (menu) {
@@ -68,13 +76,22 @@ const Navbar = () => {
           </ul>
 
           {/* Cart Icon */}
-          <Image
-            src="/assets/shared/desktop/icon-cart.svg"
-            width={23.33}
-            height={20}
-            alt="icon-cart"
-          />
+          <div className="relative cursor-pointer" onClick={toggleCart}>
+            <Image
+              src="/assets/shared/desktop/icon-cart.svg" // Your SVG cart icon path
+              width={23.33}
+              height={20}
+              alt="icon-cart"
+            />
+            {cartItems.length > 0 && (
+              <span className="absolute top-[-30%] right-[-30%] bg-primary text-white rounded-full h-4 w-4 flex items-center justify-center text-xs">
+                {cartItems.length}
+              </span>
+            )}
+          </div>
         </header>
+        {/* Render the Cart component */}
+        <Cart isOpen={cartOpen} onClose={() => setCartOpen(false)} />
       </AppContainer>
 
       {/* Hamburger Menu & Overlay */}

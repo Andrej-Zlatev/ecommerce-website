@@ -5,6 +5,7 @@ import Heading1 from "../typography/Heading1";
 import Button4 from "../ui/Button4";
 import Heading4 from "../typography/Heading4";
 import Button2 from "../ui/Button2";
+import Link from "next/link";
 const RandomProducts = () => {
   return (
     <AppContainer>
@@ -27,7 +28,9 @@ const RandomProducts = () => {
                   Upgrade to premium speakers that are phenomenally built to
                   deliver truly remarkable sound.
                 </p>
-                <Button4>See product</Button4>
+                <Link href={"/speakers/6"}>
+                  <Button4>See product</Button4>
+                </Link>
               </div>
             </div>
           </div>
@@ -44,7 +47,9 @@ const RandomProducts = () => {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <Button4>See product</Button4>
+              <Link href={"/speakers/6"}>
+                <Button4>See product</Button4>
+              </Link>
             </div>
           </div>
           <div className="flex bg-primary h-[720px] bg-patternCircles bg-no-repeat rounded-md bg-bottom lg:hidden md:hidden">
@@ -60,14 +65,18 @@ const RandomProducts = () => {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <Button4>See product</Button4>
+              <Link href={"/speakers/6"}>
+                <Button4>See product</Button4>
+              </Link>
             </div>
           </div>
           <div className="hidden lg:block bg-zx7Desktop h-[320px] bg-cover rounded-md">
             <div className="w-[40%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/speakers/5"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>
@@ -75,7 +84,9 @@ const RandomProducts = () => {
             <div className="w-[40%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/speakers/5"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>
@@ -83,7 +94,9 @@ const RandomProducts = () => {
             <div className="w-[70%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/speakers/5"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>
@@ -100,7 +113,9 @@ const RandomProducts = () => {
             <div className="h-full flex items-center justify-center bg-lightGray rounded-md">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/earphones/1"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>
@@ -117,7 +132,9 @@ const RandomProducts = () => {
             <div className="h-full flex items-center justify-center bg-lightGray rounded-md">
               <div className="w-[250px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/earphones/1"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>
@@ -134,7 +151,9 @@ const RandomProducts = () => {
             <div className=" flex items-center justify-center bg-lightGray rounded-md  h-[200px] ">
               <div className="w-[340px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Button2>See product</Button2>
+                <Link href={"/earphones/1"}>
+                  <Button2>See product</Button2>
+                </Link>
               </div>
             </div>
           </div>

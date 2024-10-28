@@ -3,8 +3,14 @@ import CategorySection from "../components/common/CategorySection/CategorySectio
 import ProductList from "../components/common/ProductList/ProductList";
 import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
-
 import data from "../data/data.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Wireless & Wired Headphones | Immersive Audio Experience",
+  description:
+    "Browse our selection of headphones, including wireless and wired options, for an immersive listening experience. Whether for gaming, music, or travel, find the perfect pair to suit your needs.",
+};
 
 const Headphones = () => {
   const headphones = data.products.filter(

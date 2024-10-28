@@ -4,6 +4,13 @@ import ProductList from "../components/common/ProductList/ProductList";
 import BestGearSection from "../components/Home/BestGearSection";
 import { Product } from "../types/product";
 import data from "../data/data.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Earphones & In-Ear Headphones | Superior Sound on the Go",
+  description:
+    "Shop our collection of earphones and in-ear headphones that provide clear, immersive audio. Designed for comfort and portability, they’re ideal for music lovers who need quality sound on the go.",
+};
 
 const Earphones = async () => {
   const earphones = data.products.filter(

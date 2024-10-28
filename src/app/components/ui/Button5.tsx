@@ -1,26 +1,18 @@
-"use client";
-import { useState } from "react";
+// Button5.tsx
+interface Props {
+  onClick: () => void;
+  children: React.ReactNode; // Add children prop
+}
 
-const Button4 = () => {
-  const [count, setCount] = useState<number>(0);
-
+const Button5 = ({ onClick, children }: Props) => {
   return (
-    <div className="flex ">
-      <button
-        onClick={() => setCount((count) => count - 1)}
-        className="bg-lightGray p-3 text-[#979797] hover:text-primary"
-      >
-        -
-      </button>
-      <p className="bg-lightGray p-3">{count}</p>
-      <button
-        onClick={() => setCount((count) => count + 1)}
-        className="bg-lightGray p-3 text-[#979797] hover:text-primary"
-      >
-        +
-      </button>
-    </div>
+    <button
+      onClick={onClick}
+      className="bg-lightGray p-3 text-[#979797] hover:text-primary"
+    >
+      {children}
+    </button>
   );
 };
 
-export default Button4;
+export default Button5;

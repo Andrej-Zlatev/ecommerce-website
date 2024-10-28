@@ -3,6 +3,7 @@ import Overline from "../../typography/Overline";
 import Heading1 from "../../typography/Heading1";
 import Button1 from "../../ui/Button1";
 import Heading3 from "../../typography/Heading3";
+import Link from "next/link";
 
 const HomeBanner = () => {
   return (
@@ -47,7 +48,9 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Button1>See product</Button1>
+            <Link href={"/headphones/4"}>
+              <Button1>See product</Button1>
+            </Link>
           </div>
         </div>
       </AppContainer>
