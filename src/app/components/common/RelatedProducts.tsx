@@ -5,7 +5,6 @@ import Image from "next/image";
 import Heading3 from "../typography/Heading3";
 import Heading5 from "../typography/Heading5";
 import Link from "next/link";
-import Button1 from "../ui/Button1";
 interface RelatedProps {
   product: Product;
 }
