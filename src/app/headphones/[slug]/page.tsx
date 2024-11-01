@@ -3,6 +3,7 @@ import ProductCardDetail from "@/app/components/common/ProductCardDetail/Product
 import ProductGallery from "@/app/components/common/ProductGallery/ProductGallery";
 import data from "../../data/data.json";
 import { Metadata } from "next";
+import RelatedProducts from "@/app/components/common/RelatedProducts";
 
 export const generateMetadata = ({
   params,
@@ -30,6 +31,7 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
       <ProductCardDetail product={product} />
       <Features product={product} />
       <ProductGallery product={product} />
+      <RelatedProducts product={product} />
     </>
   );
 };
