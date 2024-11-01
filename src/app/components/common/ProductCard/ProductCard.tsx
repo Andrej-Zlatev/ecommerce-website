@@ -55,7 +55,7 @@ const ProductCard = ({ product, index }: ProductCardProps) => {
 
               <Heading2>{product.name}</Heading2>
               <p>{product.description}</p>
-              <Link href={`${product.category}/${product.id}`}>
+              <Link href={`${product.category}/${product.slug}`}>
                 <Button1>See product</Button1>
               </Link>
             </div>

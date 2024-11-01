@@ -19,9 +19,7 @@ export const generateMetadata = ({
 };
 
 const ProductDetail = async ({ params }: { params: { slug: string } }) => {
-  const product = data.products.find(
-    (product) => product.id === Number(params.slug)
-  );
+  const product = data.products.find((product) => product.slug === params.slug);
 
   if (!product) {
     return <div>Product not found</div>;

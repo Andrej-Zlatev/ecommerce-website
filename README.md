@@ -26,5 +26,5 @@ To run the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/Andrej-Zlatev/ecommerce-website.git
    ```

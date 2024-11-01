@@ -3,6 +3,7 @@ import ProductCardDetail from "@/app/components/common/ProductCardDetail/Product
 import ProductGallery from "@/app/components/common/ProductGallery/ProductGallery";
 import data from "../../data/data.json";
 import { Metadata } from "next";
+import RelatedProducts from "@/app/components/common/RelatedProducts";
 
 export const generateMetadata = ({
   params,
@@ -19,9 +20,7 @@ export const generateMetadata = ({
 };
 
 const ProductDetail = async ({ params }: { params: { slug: string } }) => {
-  const product = data.products.find(
-    (product) => product.id === Number(params.slug)
-  );
+  const product = data.products.find((product) => product.slug === params.slug);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -32,6 +31,7 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
       <ProductCardDetail product={product} />
       <Features product={product} />
       <ProductGallery product={product} />
+      <RelatedProducts product={product} />
     </>
   );
 };
