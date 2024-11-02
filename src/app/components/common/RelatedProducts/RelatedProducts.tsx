@@ -1,9 +1,9 @@
 import { Product } from "@/app/types/product";
-import AppContainer from "../layout/AppContainer";
-import AppSection from "../layout/AppSection";
+import AppContainer from "../../layout/AppContainer";
+import AppSection from "../../layout/AppSection";
 import Image from "next/image";
-import Heading3 from "../typography/Heading3";
-import Heading5 from "../typography/Heading5";
+import Heading3 from "../../typography/Heading3";
+import Heading5 from "../../typography/Heading5";
 import Link from "next/link";
 interface RelatedProps {
   product: Product;

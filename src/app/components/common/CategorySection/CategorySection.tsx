@@ -17,13 +17,13 @@ export const categories: categoryProps[] = [
     category: "speakers",
     id: 2,
     image: "/assets/shared/desktop/image-category-thumbnail-speakers.png",
-    link: "speakers",
+    link: "/speakers",
   },
   {
     category: "earphones",
     id: 3,
     image: "/assets/shared/desktop/image-category-thumbnail-earphones.png",
-    link: "earphones",
+    link: "/earphones",
   },
 ];
 

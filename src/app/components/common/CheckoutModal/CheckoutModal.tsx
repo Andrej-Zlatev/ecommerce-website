@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import { useCart } from "../context/CartContext";
+import { useCart } from "../../../context/CartContext";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
 import { useRouter } from "next/navigation";

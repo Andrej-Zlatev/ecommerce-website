@@ -3,7 +3,7 @@ import ProductCardDetail from "@/app/components/common/ProductCardDetail/Product
 import ProductGallery from "@/app/components/common/ProductGallery/ProductGallery";
 import data from "../../data/data.json";
 import { Metadata } from "next";
-import RelatedProducts from "@/app/components/common/RelatedProducts";
+import RelatedProducts from "@/app/components/common/RelatedProducts/RelatedProducts";
 import BestGearSection from "@/app/components/Home/BestGearSection";
 import CategorySection from "@/app/components/common/CategorySection/CategorySection";
 

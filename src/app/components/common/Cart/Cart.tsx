@@ -1,8 +1,8 @@
 import { useState } from "react";
-import CheckoutModal from "./CheckoutModal";
-import { useCart } from "../context/CartContext";
+import CheckoutModal from "../CheckoutModal/CheckoutModal";
+import { useCart } from "../../../context/CartContext";
 import Image from "next/image";
-import Button5 from "./ui/Button5";
+import Button5 from "../../ui/Button5";
 
 interface CartProps {
   isOpen: boolean;

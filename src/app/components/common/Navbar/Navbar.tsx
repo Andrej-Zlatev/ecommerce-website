@@ -8,7 +8,7 @@ import Button3 from "../../ui/Button3";
 import Heading6 from "../../typography/Heading6";
 import AppSection from "../../layout/AppSection";
 import { useCart } from "@/app/context/CartContext";
-import Cart from "../../Cart";
+import Cart from "../Cart/Cart";
 import { FaGithub } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 
