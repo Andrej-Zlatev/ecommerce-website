@@ -10,11 +10,13 @@ import AppSection from "../../layout/AppSection";
 import { useCart } from "@/app/context/CartContext";
 import Cart from "../../Cart";
 import { FaGithub } from "react-icons/fa";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
   const [cartOpen, setCartOpen] = useState(false); // State for cart visibility
   const { cartItems } = useCart(); // Get cart items from context
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setMenu((prevState) => !prevState);
@@ -62,16 +64,36 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="text-white gap-x-8 text-[13px] font-bold uppercase tracking-[2px] hidden lg:flex">
-            <Link href="/" className="hover:text-primary">
+            <Link
+              href="/"
+              className={`hover:text-primary ${
+                pathname === "/" ? "text-primary" : ""
+              }`}
+            >
               Home
             </Link>
-            <Link href="/headphones" className="hover:text-primary">
+            <Link
+              href="/headphones"
+              className={`hover:text-primary ${
+                pathname.includes("/headphones") ? "text-primary" : ""
+              }`}
+            >
               Headphones
             </Link>
-            <Link href="/speakers" className="hover:text-primary">
+            <Link
+              href="/speakers"
+              className={`hover:text-primary ${
+                pathname.includes("/speakers") ? "text-primary" : ""
+              }`}
+            >
               Speakers
             </Link>
-            <Link href="/earphones" className="hover:text-primary">
+            <Link
+              href="/earphones"
+              className={`hover:text-primary ${
+                pathname.includes("/earphones") ? "text-primary" : ""
+              }`}
+            >
               Earphones
             </Link>
           </ul>

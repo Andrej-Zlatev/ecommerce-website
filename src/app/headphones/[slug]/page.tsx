@@ -4,6 +4,8 @@ import ProductGallery from "@/app/components/common/ProductGallery/ProductGaller
 import data from "../../data/data.json";
 import { Metadata } from "next";
 import RelatedProducts from "@/app/components/common/RelatedProducts";
+import CategorySection from "@/app/components/common/CategorySection/CategorySection";
+import BestGearSection from "@/app/components/Home/BestGearSection";
 
 export const generateMetadata = ({
   params,
@@ -32,6 +34,8 @@ const ProductDetail = async ({ params }: { params: { slug: string } }) => {
       <Features product={product} />
       <ProductGallery product={product} />
       <RelatedProducts product={product} />
+      <CategorySection />
+      <BestGearSection />
     </>
   );
 };
