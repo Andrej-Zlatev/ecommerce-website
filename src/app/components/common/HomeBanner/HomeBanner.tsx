@@ -20,7 +20,7 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link href={"/headphones/4"}>
+            <Link href={"/headphones/xx99-mark-two-headphones"}>
               <Button1>See product</Button1>
             </Link>
           </div>
@@ -36,7 +36,7 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link href={"/headphones/4"}>
+            <Link href={"/headphones/xx99-mark-two-headphones"}>
               <Button1>See product</Button1>
             </Link>
           </div>
@@ -52,7 +52,7 @@ const HomeBanner = () => {
               Experience natural, lifelike audio and exceptional build quality
               made for the passionate music enthusiast.
             </p>
-            <Link href={"/headphones/4"}>
+            <Link href={"/headphones/xx99-mark-two-headphones"}>
               <Button1>See product</Button1>
             </Link>
           </div>

@@ -28,7 +28,7 @@ const RandomProducts = () => {
                   Upgrade to premium speakers that are phenomenally built to
                   deliver truly remarkable sound.
                 </p>
-                <Link href={"/speakers/6"}>
+                <Link href={"/speakers/zx9-speaker"}>
                   <Button4>See product</Button4>
                 </Link>
               </div>
@@ -47,7 +47,7 @@ const RandomProducts = () => {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <Link href={"/speakers/6"}>
+              <Link href={"/speakers/zx9-speaker"}>
                 <Button4>See product</Button4>
               </Link>
             </div>
@@ -65,7 +65,7 @@ const RandomProducts = () => {
                 Upgrade to premium speakers that are phenomenally built to
                 deliver truly remarkable sound.
               </p>
-              <Link href={"/speakers/6"}>
+              <Link href={"/speakers/zx9-speaker"}>
                 <Button4>See product</Button4>
               </Link>
             </div>
@@ -74,7 +74,7 @@ const RandomProducts = () => {
             <div className="w-[40%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Link href={"/speakers/5"}>
+                <Link href={"/speakers/zx7-speaker"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>
@@ -84,7 +84,7 @@ const RandomProducts = () => {
             <div className="w-[40%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Link href={"/speakers/5"}>
+                <Link href={"/speakers/zx7-speaker"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>
@@ -94,7 +94,7 @@ const RandomProducts = () => {
             <div className="w-[70%]  h-full flex items-center justify-center">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>ZX7 SPEAKER</Heading4>
-                <Link href={"/speakers/5"}>
+                <Link href={"/speakers/zx7-speaker"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>
@@ -113,7 +113,7 @@ const RandomProducts = () => {
             <div className="h-full flex items-center justify-center bg-lightGray rounded-md">
               <div className="w-[204px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Link href={"/earphones/1"}>
+                <Link href={"/earphones/yx1-earphones"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>
@@ -132,7 +132,7 @@ const RandomProducts = () => {
             <div className="h-full flex items-center justify-center bg-lightGray rounded-md">
               <div className="w-[250px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Link href={"/earphones/1"}>
+                <Link href={"/earphones/yx1-earphones"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>
@@ -151,7 +151,7 @@ const RandomProducts = () => {
             <div className=" flex items-center justify-center bg-lightGray rounded-md  h-[200px] ">
               <div className="w-[340px] space-y-[2rem]">
                 <Heading4>YX1 EARPHONES</Heading4>
-                <Link href={"/earphones/1"}>
+                <Link href={"/earphones/yx1-earphones"}>
                   <Button2>See product</Button2>
                 </Link>
               </div>

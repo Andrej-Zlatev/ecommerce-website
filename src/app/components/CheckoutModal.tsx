@@ -51,7 +51,7 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({
       clearCart();
       router.push("/");
     },
-    [clearCart, router, onClose]
+    [clearCart, router]
   );
 
   useEffect(() => {
