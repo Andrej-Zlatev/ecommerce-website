@@ -1,13 +1,27 @@
-import { useState, useEffect } from "react";
+"use client";
+import { useState, useEffect, useCallback } from "react";
 import { useCart } from "../context/CartContext";
 import Image from "next/image";
 import { FiCheckCircle } from "react-icons/fi";
+import { useRouter } from "next/navigation";
 
 interface CheckoutModalProps {
   isOpen: boolean;
   onClose: () => void;
-  clearCart: () => void; // Add clearCart prop
+  clearCart: () => void;
 }
+
+const SHIPPING_COST = 10.0;
+const VAT_PERCENTAGE = 0.2;
+
+const initialFormState = {
+  name: "",
+  email: "",
+  phone: "",
+  city: "",
+  zipcode: "",
+  country: "",
+};
 
 const CheckoutModal: React.FC<CheckoutModalProps> = ({
   isOpen,
@@ -15,49 +29,42 @@ const CheckoutModal: React.FC<CheckoutModalProps> = ({
   clearCart,
 }) => {
   const { cartItems, getTotalPrice } = useCart();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    city: "",
-    zipcode: "",
-    country: "",
-  });
+  const [formData, setFormData] = useState(initialFormState);
   const [success, setSuccess] = useState(false);
+  const router = useRouter();
 
-  const SHIPPING_COST = 10.0;
-  const VAT_PERCENTAGE = 0.2;
-
-  const calculateGrandTotal = () => {
+  const calculateGrandTotal = useCallback(() => {
     const totalPrice = getTotalPrice();
     const vatAmount = totalPrice * VAT_PERCENTAGE;
     return totalPrice + vatAmount + SHIPPING_COST;
-  };
+  }, [getTotalPrice]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+  }, []);
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSuccess(true);
-    clearCart(); // Clear the cart after successful order
-  };
+  const handleSubmit = useCallback(
+    (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      setSuccess(true);
+      clearCart();
+      router.push("/");
+    },
+    [clearCart, router, onClose]
+  );
 
-  // Reset success state when modal opens
   useEffect(() => {
     if (isOpen) {
-      setSuccess(false); // Reset success state
+      setSuccess(false);
+      setFormData(initialFormState);
     }
   }, [isOpen]);
 
+  if (!isOpen) return null;
+
   return (
-    <div
-      className={`fixed inset-0 bg-black bg-opacity-70 ${
-        isOpen ? "flex" : "hidden"
-      } items-center justify-center z-50`}
-    >
+    <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-lg w-full max-w-[25rem] shadow-lg relative lg:w-3/4 md:w-4/5 sm:w-11/12 max-h-[90vh] overflow-y-auto">
         <button
           onClick={onClose}

@@ -10,6 +10,7 @@ import { Product } from "@/app/types/product";
 import Overline from "../../typography/Overline";
 import { useState } from "react";
 import { useCart } from "@/app/context/CartContext";
+import toast from "react-hot-toast";
 
 interface ProductCardDetailProps {
   product: Product;
@@ -44,6 +45,7 @@ const ProductCardDetail = ({ product }: ProductCardDetailProps) => {
 
     addItemToCart(itemToAdd); // Call addItemToCart with the item
     setQuantity(1); // Reset quantity after adding to cart
+    toast.success(`Added ${product.name} to cart`);
   };
 
   return (

@@ -1,6 +1,7 @@
 // context/CartContext.tsx
 "use client";
 import React, { createContext, useContext, useState, ReactNode } from "react";
+import toast from "react-hot-toast";
 
 // Define the item type
 interface CartItem {
@@ -44,7 +45,12 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
 
   const updateItemQuantity = (id: number, quantity: number) => {
     setCartItems((prev) =>
-      prev.map((item) => (item.id === id ? { ...item, quantity } : item))
+      prev.map((item) => {
+        if (item.id === id) {
+          return { ...item, quantity };
+        }
+        return item;
+      })
     );
   };
 
@@ -53,6 +59,10 @@ export const CartProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const removeItemFromCart = (id: number) => {
+    const itemToRemove = cartItems.find((item) => item.id === id);
+    if (itemToRemove) {
+      toast.success(`Removed ${itemToRemove.name} from cart`);
+    }
     setCartItems((prev) => prev.filter((item) => item.id !== id));
   };
 

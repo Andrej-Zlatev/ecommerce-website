@@ -6,6 +6,7 @@ import Navbar from "./components/common/Navbar/Navbar";
 import Footer from "./components/common/Footer/Footer";
 import ScrollToTopButton from "./components/common/ScrollToTopButton/ScrollToTopButton";
 import { CartProvider } from "./context/CartContext";
+import { Toaster } from "react-hot-toast";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -34,6 +35,22 @@ export default function RootLayout({
           <ScrollToTopButton />
           <Footer />
         </CartProvider>
+        <Toaster
+          position="top-right"
+          toastOptions={{
+            duration: 2000,
+            style: {
+              background: "#333",
+              color: "#fff",
+            },
+            success: {
+              iconTheme: {
+                primary: "#4CAF50",
+                secondary: "#fff",
+              },
+            },
+          }}
+        />
       </body>
     </html>
   );
