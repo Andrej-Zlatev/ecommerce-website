@@ -9,6 +9,7 @@ import Heading6 from "../../typography/Heading6";
 import AppSection from "../../layout/AppSection";
 import { useCart } from "@/app/context/CartContext";
 import Cart from "../../Cart";
+import { FaGithub } from "react-icons/fa";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -75,19 +76,32 @@ const Navbar = () => {
             </Link>
           </ul>
 
-          {/* Cart Icon */}
-          <div className="relative cursor-pointer" onClick={toggleCart}>
-            <Image
-              src="/assets/shared/desktop/icon-cart.svg" // Your SVG cart icon path
-              width={23.33}
-              height={20}
-              alt="icon-cart"
-            />
-            {cartItems.length > 0 && (
-              <span className="absolute top-[-30%] right-[-30%] bg-primary text-white rounded-full h-4 w-4 flex items-center justify-center text-xs">
-                {cartItems.length}
-              </span>
-            )}
+          {/* Icons Container */}
+          <div className="flex items-center gap-6">
+            {/* GitHub Icon */}
+            <Link
+              href="https://github.com/Andrej-Zlatev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-primary transition-colors"
+            >
+              <FaGithub size={24} />
+            </Link>
+
+            {/* Cart Icon */}
+            <div className="relative cursor-pointer" onClick={toggleCart}>
+              <Image
+                src="/assets/shared/desktop/icon-cart.svg"
+                width={23.33}
+                height={20}
+                alt="icon-cart"
+              />
+              {cartItems.length > 0 && (
+                <span className="absolute top-[-30%] right-[-30%] bg-primary text-white rounded-full h-4 w-4 flex items-center justify-center text-xs">
+                  {cartItems.length}
+                </span>
+              )}
+            </div>
           </div>
         </header>
         {/* Render the Cart component */}
