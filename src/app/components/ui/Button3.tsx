@@ -1,13 +1,11 @@
 import { ButtonProps } from "@/app/types/buttonProps";
 import Image from "next/image";
 
-const Button3 = ({ children, onClick }: ButtonProps) => {
+const Button3 = ({ children, onClick, className }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={
-        "w-[160px] h-[48px] font-bold hover:text-primary uppercase tracking-widest flex justify-center items-center text-[#979797]"
-      }
+      className={`w-[160px] h-[48px] font-bold hover:text-primary uppercase tracking-widest flex justify-center items-center text-[#979797] ${className || ""}`}
     >
       {children}{" "}
       <Image

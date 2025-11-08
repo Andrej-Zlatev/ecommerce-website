@@ -34,7 +34,7 @@ const CategorySection = () => {
         <div className="grid grid-cols-1 gap-y-24 md:grid-cols-3 md:gap-x-[30px]">
           {categories.map((category) => (
             <div
-              className="bg-lightGray h-[210px] rounded-[8px] relative flex justify-center items-center text-center"
+              className="bg-lightGray h-[210px] rounded-[8px] relative flex justify-center items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl cursor-pointer group"
               key={category.id}
             >
               <Image
@@ -42,12 +42,14 @@ const CategorySection = () => {
                 width={178}
                 height={160}
                 alt="category-image"
-                className="absolute top-[-30%] left-[50%] translate-x-[-50%] "
+                className="absolute top-[-30%] left-[50%] translate-x-[-50%] transition-transform duration-300 ease-in-out group-hover:scale-110 group-hover:-translate-y-2"
               />
-              <div className="mt-[6rem]">
+              <div className="mt-[6rem] transition-all duration-300 ease-in-out group-hover:translate-y-[-4px]">
                 <Heading6>{category.category}</Heading6>
                 <Link href={category.link}>
-                  <Button3>SHOP</Button3>
+                  <Button3 className="transition-all duration-300 ease-in-out group-hover:opacity-80">
+                    SHOP
+                  </Button3>
                 </Link>
               </div>
             </div>
